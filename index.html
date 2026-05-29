@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varun Saravanan — Embedded Systems & Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Varun Saravanan — ECE undergrad, CTO of Fitti, building edge AI, IoT security, and full stack systems from Chennai, India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css?v=3">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.3.0/build/spline-viewer.js"></script>
+</head>
+<body>
+  <div id="customCursorDot" class="custom-cursor-dot"></div>
+  <div id="customCursorRing" class="custom-cursor-ring"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- VIDEO LOADING SCREEN                                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="videoLoader" class="video-loader">
+    <video id="loaderVideo" autoplay muted playsinline>
+      <source src="assets/0528.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button id="skipLoader" class="skip-loader-btn" aria-label="Skip intro">
+      <span>SKIP INTRO</span>
+      <svg class="skip-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- FLOATING GLASS ISLAND NAV                                   -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <nav class="fluid-island-nav" id="mainNav">
+    <div class="nav-outer-shell">
+      <div class="nav-inner-core">
+
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active" data-target="hero">Home</a></li>
+          <li><a href="#skills" class="nav-link" data-target="skills">Skills</a></li>
+          <li><a href="#experience" class="nav-link" data-target="experience">Experience</a></li>
+          <li><a href="#projects" class="nav-link" data-target="projects">Projects</a></li>
+          <li><a href="#about" class="nav-link" data-target="about">About</a></li>
+          <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+          <span class="ham-line ham-line-1"></span>
+          <span class="ham-line ham-line-2"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <div class="mobile-menu-inner">
+      <a href="#hero" class="mobile-link" data-index="0">Home</a>
+      <a href="#skills" class="mobile-link" data-index="1">Skills</a>
+      <a href="#experience" class="mobile-link" data-index="2">Experience</a>
+      <a href="#projects" class="mobile-link" data-index="3">Projects</a>
+      <a href="#about" class="mobile-link" data-index="4">About</a>
+      <a href="#contact" class="mobile-link" data-index="5">Contact</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- MAIN SCROLL CONTAINER                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <main class="scroll-container loading" id="scrollContainer">
+
+    <!-- ───────────────────────────────────────────────────────── -->
+    <!-- PAGE 1 · HERO LANDING                                     -->
+    <!-- ───────────────────────────────────────────────────────── -->
+    <section class="page" id="hero">
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/horizon-sky-wanderer-moewalls-com.mp4" type="video/mp4">
+      </video>
+      <div class="overlay hero-overlay"></div>
+
+      <div class="content hero-content">
+        <div class="eyebrow-pill eyebrow-dark">
+          <span class="reveal-wrap"><span class="reveal-inner" data-delay="0">Chennai, Tamil Nadu</span></span>
+        </div>
+        <h1 class="hero-heading" id="heroHeading">
+          <span class="reveal-wrap"><span class="reveal-inner" data-delay="150" id="heroName1">VARUN</span></span>
+          <span class="reveal-wrap"><span class="reveal-inner" data-delay="250" id="heroName2">SARAVANAN</span></span>
+        </h1>
+        <div class="double-bezel cta-pill cta-dark hero-sub-pill">
+          <p class="hero-sub hero-sub-dark">
+            <span class="reveal-wrap"><span class="reveal-inner" data-delay="350">Embedded Systems &amp; Distributed Cloud Architect</span></span>
+          </p>
+        </div>
+        <div class="double-bezel cta-pill cta-dark hero-tagline-pill">
+          <p class="hero-tagline hero-tagline-dark">
+            <span class="reveal-wrap"><span class="reveal-inner" data-delay="450">Edge Computing · Hardware-Software Co-Design · Low-Latency Signal Processing · Defensive Systems</span></span>
+          </p>
+        </div>
+
+        <div class="double-bezel cta-pill cta-dark">
+          <a href="#skills" class="btn-primary btn-dark">
+            <span class="reveal-wrap"><span class="btn-label reveal-inner" data-delay="550">EXPLORE CAPABILITIES</span></span>
+            <div class="btn-icon-wrap">
+              <span class="btn-arrow">↓</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Spline 3D Foreground — Transparent overlay -->
+      <div class="spline-foreground" id="splineDrag">
+        <spline-viewer url="https://prod.spline.design/j4jv34m8PjZtiz3hKYJRutjl/scene.splinecode"></spline-viewer>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+    <!-- PAGE 2 · SKILLS & PROJECTS                                -->
+    <!-- ───────────────────────────────────────────────────────── -->
+    <section class="page" id="skills">
+      <div class="bg-img" style="background-image: url('assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_01.27.07_-2023.08.09_15.01.40-.jpg');"></div>
+      <div class="overlay overlay-heavy-dark"></div>
+      <div class="content skills-content">
+        <div class="eyebrow-pill">
+          <span class="reveal-wrap"><span class="reveal-inner" data-delay="0">Core Capabilities</span></span>
+        </div>
+        <h2 class="section-heading">
+          <span class="reveal-wrap"><span class="reveal-inner" data-delay="100">ENGINEERING</span></span>
+          <span class="reveal-wrap"><span class="reveal-inner" data-delay="200">COMPETENCIES</span></span>
+        </h2>
+
+        <div class="bento-grid">
+          <!-- Card 1: Distributed Cloud Architecture — spans 2 cols -->
+          <div class="double-bezel bento-card bento-wide reveal-item" data-delay="150">
+            <div class="card-core">
+              <div class="card-tag">Distributed Systems</div>
+              <h3 class="card-title">Cloud Architectures</h3>
+              <p class="card-desc">Designing robust, high-performance web backends and APIs using React, Vite, Node.js, and Supabase. Implementing real-time telemetry, secure databases, and automated claim translation engines.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Hardware-Software Co-Design -->
+          <div class="double-bezel bento-card reveal-item" data-delay="200">
+            <div class="card-core">
+              <div class="card-tag">Embedded Systems</div>
+              <h3 class="card-title">Edge Inference Systems</h3>
+              <p class="card-desc">Developing low-level firmware for ARM Cortex and ESP32 nodes using FreeRTOS and TensorFlow Lite Micro. Specializing in hardware-software co-design, frame buffering, and edge diagnostics.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Edge AI -->
+          <div class="double-bezel bento-card reveal-item" data-delay="250">
+            <div class="card-core">
+              <div class="card-tag">Edge AI</div>
+              <h3 class="card-title">Computer Vision Pipelines</h3>
+              <p class="card-desc">Deploying optimized convolutional models (YOLOv8) with FastAPI microservices and responsive progressive web applications (PWA) for real-time localization and HUD telemetry.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Cybersecurity -->
+          <div class="double-bezel bento-card reveal-item" data-delay="300">
+            <div class="card-core">
+              <div class="card-tag">Information Security</div>
+              <h3 class="card-title">IoT Auditing & Pentesting</h3>
+              <p class="card-desc">Performing firmware reverse engineering, binary static auditing, network communications analysis, and security vulnerability scanning using Ghidra and Burp Suite.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+    <!-- PAGE 3 · EXPERIENCE                                       -->
+    <!-- ───────────────────────────────────────────────────────── -->
+    <section class="page" id="experience">
+      <div class="bg-img" style="background-image: url('assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_01.47.07_-2023.08.09_16.04.37-.jpg');"></div>
+      <div class="overlay gradient-diagonal"></div>
+      <div class="content experience-content">
+        <div class="editorial-split">
+          <div class="split-left">
+            <div class="eyebrow-pill">
+              <span class="reveal-wrap"><span class="reveal-inner" data-delay="0">Systems History</span></span>
+            </div>
+            <h2 class="massive-display">
+              <span class="reveal-wrap"><span class="reveal-inner" data-delay="100">EXP.</span></span>
+            </h2>
+          </div>
+          <div class="split-right">
+            <!-- Experience Card 1 -->
+            <div class="double-bezel exp-card reveal-item" data-delay="200">
+              <div class="exp-core">
+                <div class="exp-date">Feb 2025 — Present</div>
+                <h3 class="exp-role">Research & Development Associate</h3>
+                <p class="exp-company">Center of Innovation, Rajalakshmi Institute of Technology</p>
+                <p class="exp-location">Designing edge AI nodes, integrated sensor telemetry networks, and cloud database infrastructure.</p>
+              </div>
+            </div>
+            <!-- Experience Card 2 -->
+            <div class="double-bezel exp-card reveal-item" data-delay="300">
+              <div class="exp-core">
+                <div class="exp-date">July 2025</div>
+                <h3 class="exp-role">Systems Engineering Trainee</h3>
+                <p class="exp-company">Engine Factory Avadi (Ministry of Defence, Govt. of India)</p>
+                <p class="exp-location">Analyzed heavy systems instrumentation, testing protocols, and industrial communication grids.</p>
+              </div>
+            </div>
+            <!-- Education Card -->
+            <div class="double-bezel exp-card reveal-item" data-delay="400">
+              <div class="exp-core">
+                <div class="exp-date">2024 — Present</div>
+                <h3 class="exp-role">Chief Technology Officer & Co-Founder</h3>
+                <p class="exp-company">Fitti (IoT Fitness Venture)</p>
+                <p class="exp-location">Academic: B.E. Electronics & Communication Engineering, RIT</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+    <!-- PAGE 4 · MAJOR PROJECTS                                   -->
+    <!-- ───────────────────────────────────────────────────────── -->
+    <section class="page" id="projects">
+      <div class="bg-img" id="projectsBg" style="background-image: url('assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_00.00.01_-2023.08.09_01.37.10-.jpg');"></div>
+      <div class="overlay overlay-heavy-dark"></div>
+      <div class="content projects-content">
+        <div class="eyebrow-pill">
+          <span class="reveal-wrap"><span class="reveal-inner" data-delay="0">Systems Prototypes</span></span>
+        </div>
+        <h2 class="section-heading">
+          <span class="reveal-wrap"><span class="reveal-inner" data-delay="100">SWIPE PROJECTS</span></span>
+        </h2>
+        
+        <!-- Tinder Swipe Deck -->
+        <div class="deck-wrapper reveal-item" data-delay="200">
+          <div class="deck-container" id="projectsDeck">
+            <!-- Dynamically populated by JS -->
+          </div>
+          
+          <!-- Controller Island -->
+          <div class="deck-controls">
+            <button id="btnDislike" class="control-btn dislike" aria-label="Swipe left">
+              <svg class="control-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M18 6L6 18M6 6l12 12"/>
+              </svg>
+            </button>
+            <button id="btnReset" class="control-btn reset" aria-label="Reset deck">
+              <svg class="control-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 11-.57-8.38l.73-.73"/>
+              </svg>
+            </button>
+            <button id="btnLike" class="control-btn like" aria-label="Swipe right">
+              <svg class="control-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+    <!-- PAGE 5 · ABOUT                                            -->
+    <!-- ───────────────────────────────────────────────────────── -->
+    <section class="page" id="about">
+      <div class="bg-img" style="background-image: url('assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_00.00.01_-2023.08.09_02.44.21-.jpg');"></div>
+      <div class="overlay gradient-bottom-heavy"></div>
+      <div class="content about-content">
+        <h2 class="massive-display outline-text">
+          <span class="reveal-wrap"><span class="reveal-inner" data-delay="0">ABOUT</span></span>
+        </h2>
+        <div class="double-bezel about-card reveal-item" data-delay="200">
+          <div class="about-core">
+            <p class="about-text">Rather than isolating engineering domains, I operate at the convergence of hardware design, low-level firmware architecture, and distributed cloud computing. I construct end-to-end telemetry nodes and low-latency systems deployed for industrial stability.</p>
+            <p class="about-text secondary">I execute structural mapping from board schematics to REST API definitions. Maintaining design context across low-level signal registers and reactive frontends allows for rapid iteration and high-performance throughput.</p>
+            <p class="about-text tertiary">Contributing engineer to regional hardware innovation hubs, developer of security and edge AI prototypes, and active startup technical coordinator.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+    <!-- PAGE 6 · CONTACT / END                                    -->
+    <!-- ───────────────────────────────────────────────────────── -->
+    <section class="page" id="contact">
+      <div class="bg-img" style="background-image: url('assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_00.00.01_-2023.08.09_02.44.22-.jpg');"></div>
+      <div class="overlay overlay-near-opaque"></div>
+      <div class="content contact-content">
+        <div class="eyebrow-pill">
+          <span class="reveal-wrap"><span class="reveal-inner" data-delay="0">Get in Touch</span></span>
+        </div>
+        <h2 class="hero-heading contact-heading">
+          <span class="reveal-wrap"><span class="reveal-inner" data-delay="100">GET IN TOUCH</span></span>
+        </h2>
+
+        <div class="contact-grid">
+          <div class="double-bezel contact-card reveal-item" data-delay="200">
+            <div class="contact-core">
+              <div class="contact-icon">✉</div>
+              <div class="contact-info">
+                <span class="contact-label">Email</span>
+                <a href="mailto:saravananvarun6@gmail.com" class="contact-value">saravananvarun6@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="double-bezel contact-card reveal-item" data-delay="250">
+            <div class="contact-core">
+              <div class="contact-icon">☎</div>
+              <div class="contact-info">
+                <span class="contact-label">Phone</span>
+                <a href="tel:+919150188862" class="contact-value">+91 9150188862</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="double-bezel contact-card reveal-item" data-delay="300">
+            <div class="contact-core">
+              <div class="contact-icon">⬡</div>
+              <div class="contact-info">
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/varun-ecerit" target="_blank" rel="noopener" class="contact-value">linkedin.com/in/varun-ecerit</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="double-bezel contact-card reveal-item" data-delay="350">
+            <div class="contact-core">
+              <div class="contact-icon">⌖</div>
+              <div class="contact-info">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Chennai, Tamil Nadu — 600054</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="footer-note reveal-item" data-delay="400">Available for research, development, and engineering placements across Embedded Systems, Distributed Cloud Networks, Edge AI, or Security Auditing.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- PROJECT DETAIL MODAL OVERLAY                                -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="projectModal" class="project-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="double-bezel modal-container">
+      <div class="modal-core" id="modalCore">
+        <!-- Dynamic content populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SCRIPTS                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <script src="assets/custom_cursor_and_physics.js?v=3"></script>
+  <script>
+    // ── Video Loader Transition ──
+    const videoLoader = document.getElementById('videoLoader');
+    const loaderVideo = document.getElementById('loaderVideo');
+    const skipLoader = document.getElementById('skipLoader');
+    const pageScrollContainer = document.getElementById('scrollContainer');
+
+    function fadeOutLoader() {
+      if (!videoLoader || videoLoader.classList.contains('fade-out')) return;
+      videoLoader.classList.add('fade-out');
+      
+      // Allow scrolling
+      pageScrollContainer.classList.remove('loading');
+      
+      // Trigger animations for the active section (hero)
+      const heroContent = document.querySelector('#hero .content');
+      if (heroContent) {
+        const revealInners = heroContent.querySelectorAll('.reveal-inner');
+        revealInners.forEach(item => {
+          const delay = parseInt(item.dataset.delay || 0);
+          setTimeout(() => item.classList.add('revealed'), delay);
+        });
+        const revealItems = heroContent.querySelectorAll('.reveal-item');
+        revealItems.forEach(item => {
+          const delay = parseInt(item.dataset.delay || 0);
+          setTimeout(() => item.classList.add('revealed'), delay);
+        });
+        heroContent.classList.add('in-view');
+      }
+
+      // Remove from DOM after transition completes
+      setTimeout(() => {
+        videoLoader.style.display = 'none';
+      }, 800);
+    }
+
+    if (loaderVideo) {
+      loaderVideo.addEventListener('ended', fadeOutLoader);
+      loaderVideo.addEventListener('error', fadeOutLoader);
+      loaderVideo.play().catch(err => {
+        console.warn("Autoplay blocked or failed:", err);
+      });
+    }
+
+    if (skipLoader) {
+      skipLoader.addEventListener('click', fadeOutLoader);
+    }
+
+    // Safety timeout: fade out after 6 seconds maximum
+    setTimeout(fadeOutLoader, 6000);
+
+    // ── Scroll Reveal via IntersectionObserver ──
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // If page is loading, do not trigger animations yet
+          if (document.getElementById('scrollContainer').classList.contains('loading')) {
+            return;
+          }
+          // Handle standard reveal-items
+          const items = entry.target.querySelectorAll('.reveal-item');
+          items.forEach(item => {
+            const delay = parseInt(item.dataset.delay || 0);
+            setTimeout(() => item.classList.add('revealed'), delay);
+          });
+          // Handle reveal-inner elements
+          const innerItems = entry.target.querySelectorAll('.reveal-inner');
+          innerItems.forEach(item => {
+            const delay = parseInt(item.dataset.delay || 0);
+            setTimeout(() => item.classList.add('revealed'), delay);
+          });
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.content').forEach(el => revealObserver.observe(el));
+
+    // ── Nav Active State on Scroll ──
+    const scrollContainer = document.getElementById('scrollContainer');
+    const sections = document.querySelectorAll('.page');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    scrollContainer.addEventListener('scroll', () => {
+      const scrollPos = scrollContainer.scrollTop + window.innerHeight / 2;
+      sections.forEach((section) => {
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+        const id = section.id;
+        if (scrollPos >= top && scrollPos < bottom) {
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.dataset.target === id);
+          });
+        }
+      });
+    }, { passive: true });
+
+    // ── Hamburger Menu ──
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('mobileOverlay');
+    let menuOpen = false;
+
+    hamburger.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      hamburger.classList.toggle('is-open', menuOpen);
+      overlay.classList.toggle('is-open', menuOpen);
+
+      if (menuOpen) {
+        document.querySelectorAll('.mobile-link').forEach((link, i) => {
+          setTimeout(() => link.classList.add('visible'), 80 + i * 60);
+        });
+      } else {
+        document.querySelectorAll('.mobile-link').forEach(link => link.classList.remove('visible'));
+      }
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        hamburger.classList.remove('is-open');
+        overlay.classList.remove('is-open');
+        document.querySelectorAll('.mobile-link').forEach(l => l.classList.remove('visible'));
+      });
+    });
+
+    // ── Smooth scroll nav links ──
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.getElementById(link.dataset.target);
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // ── Tinder Swiping Projects Deck ──
+    const projectsData = [
+      {
+        id: "omnia-os",
+        title: "OMNIA OS",
+        tag: "Operating System",
+        description: "A RISC-V native operating system designed to unify three major computing ecosystems. Executing Windows, Linux, and macOS binaries on a single unified platform, delivering low-latency system translation layers and microkernel container isolation.",
+        stats: [
+          { label: "OS Ecosystems", value: "3" },
+          { label: "Emulation", value: "Native" },
+          { label: "Architecture", value: "RISC-V" }
+        ],
+        features: [
+          "Microkernel binary translation layer designed to run POSIX and PE architecture executables side-by-side.",
+          "Dynamic register-mapping algorithms optimized for low-level RISC-V physical processor nodes.",
+          "High-performance memory sandboxing system preventing cross-process memory overflow and context drift."
+        ],
+        tech: ["RISC-V Assembly", "C", "Rust", "LLVM", "Docker", "POSIX APIs"],
+        bgImage: "assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_00.00.01_-2023.08.09_01.37.10-.jpg",
+        link: "https://github.com/varun-ecerit"
+      },
+      {
+        id: "patent-engine",
+        title: "PATENT DRAFTING",
+        tag: "Full-Stack AI",
+        description: "An automated patent drafting and legal compliance analytics engine. Integrates deep linguistic processing to generate multi-claim descriptions while validating syntax against local regulatory databases.",
+        stats: [
+          { label: "Model", value: "Custom LLM" },
+          { label: "Accuracy", value: "94%" },
+          { label: "Framework", value: "Vite + Node" }
+        ],
+        features: [
+          "Recursive prompt trees designed for legal claims classification and citation mapping.",
+          "Asynchronous verification against prior art databases to audit compliance constraints.",
+          "Interactive vector embedding visualizations mapping structural text differences."
+        ],
+        tech: ["Node.js", "Vite", "Python", "HuggingFace", "Supabase", "Vector DBs"],
+        bgImage: "assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_00.00.01_-2023.08.09_01.39.04-.jpg",
+        link: "https://github.com/varun-ecerit"
+      },
+      {
+        id: "event-platform",
+        title: "EVENT TICKETING",
+        tag: "Web Platform",
+        description: "A high-throughput ticket administration and dynamic mapping platform. Integrates dual-key QR cryptography for secure, offline ticketing and real-time dashboard telemetry.",
+        stats: [
+          { label: "Flow", value: "QR Cryptography" },
+          { label: "Database", value: "Supabase" },
+          { label: "Live Maps", value: "FastAPI" }
+        ],
+        features: [
+          "Offline signature validation using public-key cryptography on localized mobile nodes.",
+          "WebSocket telemetry mapping attendee entry traffic on dynamic dashboard overlays.",
+          "Row-level security policies (RLS) and auto-scaling connections optimized for high-concurrency."
+        ],
+        tech: ["React", "FastAPI", "Supabase", "WebSockets", "Docker", "Tailwind CSS"],
+        bgImage: "assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_00.00.01_-2023.08.09_02.44.17-.jpg",
+        link: "https://github.com/varun-ecerit"
+      },
+      {
+        id: "anti-theft-surveillance",
+        title: "HARDWARE SEES",
+        tag: "Embedded Systems",
+        description: "A low-latency on-device anti-theft surveillance node. Runs edge inference models on custom microcontrollers for object detection and alert propagation.",
+        stats: [
+          { label: "Hardware", value: "ESP32-CAM" },
+          { label: "ML Engine", value: "TFLite Micro" },
+          { label: "Latency", value: "<150ms" }
+        ],
+        features: [
+          "Quantized TensorFlow Lite models compiled for low-power microcontroller memory space.",
+          "FreeRTOS task scheduling coordinating frame buffer capture and asynchronous transmission.",
+          "Ultra-low-power deep sleep cycles with hardware interrupt triggers from external PIR sensors."
+        ],
+        tech: ["C++", "ESP-IDF", "FreeRTOS", "TensorFlow Lite Micro", "WiFi", "SPIFFS"],
+        bgImage: "assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_00.00.01_-2023.08.09_02.44.21-.jpg",
+        link: "https://github.com/varun-ecerit"
+      },
+      {
+        id: "deaf-spectacle",
+        title: "DEAF ASSISTANCE",
+        tag: "AIoT Wearable",
+        description: "A wearable edge computing headset for environmental transcription and hazard localization. Synthesizes high-frequency visual models with instant HUD display layers.",
+        stats: [
+          { label: "Model", value: "YOLOv8 Edge" },
+          { label: "Protocol", value: "FastAPI" },
+          { label: "UI App", value: "PWA" }
+        ],
+        features: [
+          "Custom YOLOv8 models optimized for edge device deployment and low frame budgets.",
+          "WebRTC audio-visual streaming pipeline connecting wearable sensors to local edge processing relays.",
+          "Responsive HUD layouts rendered via Progressive Web Application shell mapping directions."
+        ],
+        tech: ["Python", "YOLOv8", "FastAPI", "WebRTC", "PWA", "Tailwind CSS"],
+        bgImage: "assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_00.00.01_-2023.08.09_02.44.22-.jpg",
+        link: "https://github.com/varun-ecerit"
+      },
+      {
+        id: "iot-penetration",
+        title: "FIRMWARE PENTEST",
+        tag: "Cybersecurity",
+        description: "An automated firmware auditing and reverse-engineering diagnostic suite. Extracts binary structures, identifies encryption keys, and maps security vulnerabilities on device endpoints.",
+        stats: [
+          { label: "Audit Type", value: "Firmware" },
+          { label: "Tools", value: "Ghidra/Burp" },
+          { label: "Findings", value: "12+ Vulns" }
+        ],
+        features: [
+          "Custom Ghidra API analysis scripts auditing control-flow graph integrity and buffer boundaries.",
+          "Entropy scanning algorithm mapping flash layouts to identify hidden encryption keys.",
+          "Fuzzing engine mapping communication vulnerabilities on serial and wireless protocols."
+        ],
+        tech: ["Python", "Ghidra API", "Burp Suite API", "Binwalk", "Radare2", "Bash"],
+        bgImage: "assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_01.27.07_-2023.08.09_15.01.40-.jpg",
+        link: "https://github.com/varun-ecerit"
+      },
+      {
+        id: "fitti-startup",
+        title: "FITTI FITNESS",
+        tag: "IoT Startup",
+        description: "An enterprise fitness analytics ecosystem. Coordinates multiple high-frequency IMU sensor modules to transmit telemetric data to a live, centralized web app.",
+        stats: [
+          { label: "Role", value: "CTO & Co-founder" },
+          { label: "Sensors", value: "IMU / BLE" },
+          { label: "Frontend", value: "React" }
+        ],
+        features: [
+          "High-frequency (100Hz) IMU sensor fusion using Kalman filters to track linear movement.",
+          "Dynamic BLE client networking protocol managing connections with multiple client hardware nodes.",
+          "Reactive Web Dashboard translating streaming telemetry into instant exercise feedback."
+        ],
+        tech: ["React", "Node.js", "Web Bluetooth API", "FastAPI", "Supabase", "Chart.js"],
+        bgImage: "assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_01.47.07_-2023.08.09_16.27.55-.jpg",
+        link: "https://github.com/varun-ecerit"
+      }
+    ];
+
+    const deckContainer = document.getElementById('projectsDeck');
+    const projectsBg = document.getElementById('projectsBg');
+    const btnDislike = document.getElementById('btnDislike');
+    const btnLike = document.getElementById('btnLike');
+    const btnReset = document.getElementById('btnReset');
+    
+    let activeCards = [];
+
+    function initDeck() {
+      if (!deckContainer) return;
+      deckContainer.innerHTML = '';
+      activeCards = [];
+      
+      // Render cards in reverse order so the first project is at the top of the HTML stack
+      projectsData.slice().reverse().forEach((project, idx) => {
+        const visualIdx = projectsData.length - 1 - idx; // actual index in data array
+        
+        const card = document.createElement('div');
+        card.className = 'double-bezel project-card';
+        card.dataset.index = visualIdx;
+        
+        // Generate stats HTML
+        const statsHtml = project.stats.map((stat, sIdx) => `
+          <div class="stat-item">
+            <span class="stat-value">${stat.value}</span>
+            <span class="stat-label">${stat.label}</span>
+          </div>
+          ${sIdx < project.stats.length - 1 ? '<div class="stat-divider"></div>' : ''}
+        `).join('');
+
+        card.innerHTML = `
+          <div class="card-core project-card-core">
+            <div class="card-tag">${project.tag}</div>
+            <h3 class="card-title">${project.title}</h3>
+            <p class="card-desc">${project.description}</p>
+            
+            <div class="project-card-stats">
+              ${statsHtml}
+            </div>
+            
+            <div class="double-bezel cta-pill cta-dark card-cta">
+              <a href="#" class="btn-primary btn-dark btn-view-project" data-id="${project.id}">
+                <span class="btn-label">VIEW PROJECT</span>
+                <div class="btn-icon-wrap">
+                  <span class="btn-arrow">↗</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        `;
+        
+        deckContainer.appendChild(card);
+        activeCards.unshift(card);
+      });
+
+      // Bind dynamic view-project clicks
+      deckContainer.querySelectorAll('.btn-view-project').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const projId = btn.dataset.id;
+          openProjectModal(projId);
+        });
+      });
+      
+      updateStackStates();
+    }
+
+    function updateStackStates() {
+      activeCards.forEach((card, idx) => {
+        card.classList.remove('top-card');
+        card.style.pointerEvents = idx === 0 ? 'auto' : 'none';
+        card.style.zIndex = 100 - idx;
+        
+        if (idx === 0) {
+          card.classList.add('top-card');
+          const activeProj = projectsData[parseInt(card.dataset.index)];
+          if (projectsBg && activeProj) {
+            projectsBg.style.backgroundImage = `url('${activeProj.bgImage}')`;
+          }
+          
+          card.style.transform = `translate(0px, 0px) rotate(0deg) scale(1)`;
+          card.style.opacity = '1';
+          
+          setupDrag(card);
+        } else if (idx === 1) {
+          card.style.transform = `translate(0px, 16px) rotate(0deg) scale(0.95)`;
+          card.style.opacity = '0.85';
+        } else if (idx === 2) {
+          card.style.transform = `translate(0px, 32px) rotate(0deg) scale(0.90)`;
+          card.style.opacity = '0.65';
+        } else {
+          card.style.transform = `translate(0px, 32px) rotate(0deg) scale(0.90)`;
+          card.style.opacity = '0';
+        }
+      });
+      
+      if (activeCards.length === 0) {
+        if (projectsBg) {
+          projectsBg.style.backgroundImage = "url('assets/Spider-Man Across the Spider-Verse (4K).mkv_snapshot_01.47.07_-2023.08.09_16.27.55-.jpg')";
+        }
+        deckContainer.innerHTML = `
+          <div class="deck-empty-state">
+            <h3>ALL PROJECTS VIEWED</h3>
+            <p>Swipe deck complete. Tap reload to explore again.</p>
+            <button class="double-bezel cta-pill btn-dark" id="btnReloadDeck" style="border: none; padding: 0.25rem;">
+              <span class="btn-primary btn-dark" style="padding: 0.625rem 2rem;">RELOAD DECK</span>
+            </button>
+          </div>
+        `;
+        document.getElementById('btnReloadDeck').addEventListener('click', initDeck);
+      }
+    }
+
+    function setupDrag(card) {
+      let startX = 0;
+      let startY = 0;
+      let currentX = 0;
+      let currentY = 0;
+      let isDragging = false;
+      
+      card.onpointerdown = null;
+      
+      card.addEventListener('pointerdown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        card.style.transition = 'none';
+        if (activeCards[1]) activeCards[1].style.transition = 'none';
+        card.setPointerCapture(e.pointerId);
+      });
+      
+      card.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        currentX = e.clientX - startX;
+        currentY = e.clientY - startY;
+        
+        const rotate = currentX * 0.08;
+        card.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${rotate}deg) scale(1)`;
+        
+        if (activeCards[1]) {
+          const dragRatio = Math.min(Math.abs(currentX) / 150, 1);
+          const nextScale = 0.95 + dragRatio * 0.05;
+          const nextTranslateY = 16 - dragRatio * 16;
+          const nextOpacity = 0.85 + dragRatio * 0.15;
+          activeCards[1].style.transform = `translate(0px, ${nextTranslateY}px) rotate(0deg) scale(${nextScale})`;
+          activeCards[1].style.opacity = nextOpacity;
+        }
+      });
+      
+      card.addEventListener('pointerup', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        card.releasePointerCapture(e.pointerId);
+        
+        const threshold = 130;
+        if (Math.abs(currentX) > threshold) {
+          const direction = currentX > 0 ? 1 : -1;
+          swipeCard(card, direction);
+        } else {
+          card.style.transition = 'transform 0.5s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.5s';
+          if (activeCards[1]) {
+            activeCards[1].style.transition = 'transform 0.5s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.5s';
+          }
+          updateStackStates();
+        }
+      });
+    }
+
+    function swipeCard(card, direction) {
+      card.style.transition = 'transform 0.6s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.6s';
+      card.style.pointerEvents = 'none';
+      
+      const flyX = direction * window.innerWidth * 1.2;
+      const flyY = (Math.random() - 0.5) * 200;
+      const flyRotate = direction * 35;
+      
+      card.style.transform = `translate(${flyX}px, ${flyY}px) rotate(${flyRotate}deg) scale(0.9)`;
+      card.style.opacity = '0';
+      
+      activeCards.shift();
+      
+      if (activeCards[0]) {
+        activeCards[0].style.transition = 'transform 0.6s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.6s';
+      }
+      
+      setTimeout(() => {
+        card.remove();
+        updateStackStates();
+      }, 500);
+    }
+
+    if (btnDislike) {
+      btnDislike.addEventListener('click', () => {
+        const topCard = activeCards[0];
+        if (topCard) swipeCard(topCard, -1);
+      });
+    }
+    
+    if (btnLike) {
+      btnLike.addEventListener('click', () => {
+        const topCard = activeCards[0];
+        if (topCard) swipeCard(topCard, 1);
+      });
+    }
+    
+    if (btnReset) {
+      btnReset.addEventListener('click', () => {
+        initDeck();
+      });
+    }
+
+    // ── Project Modal Logic ──
+    const projectModal = document.getElementById('projectModal');
+    const modalCore = document.getElementById('modalCore');
+
+    function openProjectModal(projectId) {
+      const project = projectsData.find(p => p.id === projectId);
+      if (!project || !projectModal || !modalCore) return;
+
+      const featuresHtml = project.features.map(feat => `
+        <div class="modal-feature-card">
+          <div class="feature-title">Integration Node</div>
+          <div class="feature-desc">${feat}</div>
+        </div>
+      `).join('');
+
+      const techHtml = project.tech.map(t => `
+        <span class="tech-pill">${t}</span>
+      `).join('');
+
+      modalCore.innerHTML = `
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close details">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+        <span class="modal-tag">${project.tag}</span>
+        <h3 class="modal-title" id="modalTitle">${project.title}</h3>
+        
+        <div class="modal-subtitle">SYSTEM ABSTRACT</div>
+        <p class="modal-desc">${project.description}</p>
+        
+        <div class="modal-subtitle">CORE FEATURES</div>
+        <div class="modal-section-grid">
+          ${featuresHtml}
+        </div>
+        
+        <div class="modal-subtitle">SYSTEM STACK</div>
+        <div class="modal-tech-stack">
+          ${techHtml}
+        </div>
+        
+        <div class="modal-actions">
+          <div class="double-bezel cta-pill cta-dark">
+            <a href="${project.link}" class="btn-primary btn-dark" target="_blank">
+              <span class="btn-label">VIEW INTEGRATION</span>
+              <div class="btn-icon-wrap">
+                <span class="btn-arrow">↗</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      `;
+
+      projectModal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+
+      document.getElementById('modalCloseBtn').addEventListener('click', closeProjectModal);
+    }
+
+    function closeProjectModal() {
+      if (!projectModal) return;
+      projectModal.classList.remove('is-open');
+      if (!pageScrollContainer.classList.contains('loading')) {
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (projectModal) {
+      projectModal.addEventListener('click', (e) => {
+        if (e.target === projectModal) {
+          closeProjectModal();
+        }
+      });
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeProjectModal();
+      }
+    });
+
+    initDeck();
+  </script>
+</body>
+</html>
