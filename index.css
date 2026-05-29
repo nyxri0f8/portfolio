@@ -542,6 +542,8 @@ a {
 #heroName1, #heroName2 {
   white-space: nowrap !important;
   display: inline-block;
+  padding-right: 0.12em;
+  margin-right: -0.12em;
 }
 
 /* Dark-mode eyebrow for light backgrounds */
