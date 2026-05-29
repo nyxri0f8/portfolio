@@ -10,5 +10,19 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "header",
+          "key": "User-Agent",
+          "value": "(?i).*httrack.*|.*wget.*|.*scra.*|.*extract.*|.*copier.*|.*offline.*|.*cyberduck.*|.*teleport.*|.*webcopy.*"
+        }
+      ],
+      "destination": "https://httpbin.org/status/403",
+      "permanent": false
+    }
   ]
 }
