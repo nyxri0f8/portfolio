@@ -496,7 +496,7 @@ a {
 
 .hero-sub-pill {
   margin-bottom: 0.75rem;
-  padding: 0.35rem 1rem;
+  padding: 0.4rem 1.25rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -504,11 +504,12 @@ a {
   -webkit-backdrop-filter: blur(12px);
   max-width: min(90vw, 650px);
   width: fit-content;
+  box-sizing: border-box;
 }
 
 .hero-tagline-pill {
   margin-bottom: 1.75rem;
-  padding: 0.35rem 1rem;
+  padding: 0.4rem 1.25rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -516,6 +517,7 @@ a {
   -webkit-backdrop-filter: blur(12px);
   max-width: min(90vw, 650px);
   width: fit-content;
+  box-sizing: border-box;
 }
 
 .hero-sub-pill .reveal-wrap,
@@ -525,7 +527,16 @@ a {
   display: inline-block !important;
   width: auto !important;
   max-width: 100% !important;
+  box-sizing: border-box;
   text-align: inherit;
+}
+
+.hero-sub-pill .reveal-inner,
+.hero-tagline-pill .reveal-inner {
+  display: inline-block !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+  box-sizing: border-box;
 }
 
 #heroName1, #heroName2 {
@@ -1269,7 +1280,7 @@ a {
   }
 
   .hero-heading {
-    font-size: clamp(2.2rem, 10.5vw, 4.5rem) !important;
+    font-size: clamp(1.8rem, 9.5vw, 4.5rem) !important;
     text-align: center;
   }
 
